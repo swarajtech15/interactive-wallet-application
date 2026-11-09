@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#101012" />
+    <meta
+      name="description"
+      content="Meet PocketPal After Dark: a floating, devil-inspired wallet demo for exploring your cards, spending, and a little financial mischief."
+    />
+    <title>PocketPal — A wallet with a wild side</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body data-page="home" class="nav-on">
+    <a class="skip-link" href="#app">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#/" aria-label="PocketPal overview">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+              <path d="M7 12 5 3l8 7m12 2 2-9-8 7" fill="currentColor" />
+              <rect
+                x="4"
+                y="9"
+                width="24"
+                height="20"
+                rx="6"
+                stroke="currentColor"
+                stroke-width="2.2"
+              />
+              <path
+                d="m10 17 4 2m8-2-4 2m-6 4c2 2 6 2 8 0"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="brand-name"
+            >PocketPal<span class="brand-edition">AFTER DARK</span></span
+          >
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a class="nav-link" href="#/" data-route="/">Overview</a>
+          <a class="nav-link" href="#/cards" data-route="/cards">Cards</a>
+          <a class="nav-link" href="#/activity" data-route="/activity"
+            >Activity</a
+          >
+          <a class="nav-link" href="#/profile" data-route="/profile">Profile</a>
+        </nav>
+        <div class="header-account">
+          <span class="header-status"
+            ><i class="status-dot" aria-hidden="true"></i>Demo mode</span
+          >
+          <a
+            class="header-profile"
+            href="#/profile"
+            aria-label="Open profile for Alex Morgan"
+            >AM</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Page content is rendered here by js/app.js (pages/*.js) -->
+    <main id="app" tabindex="-1"></main>
+
+    <!-- Persistent navigation for compact screens. -->
+    <nav class="tabbar" id="tabbar" aria-label="Mobile navigation">
+      <a class="tab" href="#/" data-route="/"></a>
+      <a class="tab" href="#/cards" data-route="/cards"></a>
+      <a class="tab" href="#/activity" data-route="/activity"></a>
+      <a class="tab" href="#/profile" data-route="/profile"></a>
+    </nav>
+
+    <div id="sheet-root"></div>
+    <div id="toast-root" aria-live="polite" aria-atomic="false"></div>
+    <div id="fx-root" aria-hidden="true"></div>
+
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>
